@@ -3,10 +3,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* * {
-  border: solid red 1px;
-} */
-
 .all-section {
   text-align: center;
 }
@@ -21,12 +17,15 @@ nav {
   color: white;
 }
 nav .brand {
+  width: 40%;
   font-size: 22px;
   font-weight: bold;
 }
 nav ul {
+  width: 60%;
   list-style: none;
   display: flex;
+  justify-content: end;
   gap: 25px;
 }
 nav ul li a {
@@ -37,17 +36,24 @@ nav ul li a {
 
 /* ===== SECTION 2 - HEADER ===== */
 .header-section {
-  display: flex;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
+  justify-items: center;
   padding: 50px 40px;
   align-items: center;
   gap: 40px;
 }
 .header-section img {
-  width: 600px;
-  height: 400px;
+  width: 80%;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.header-text {
+  width: 80%;
 }
 .header-text h1 {
   font-size: 32px;
@@ -68,6 +74,7 @@ nav ul li a {
 
 /* ===== SECTION 3 - BIODATA ===== */
 .biodata {
+  width: 100%;
   padding: 50px 40px;
   background: #f2f2f2;
 }
@@ -76,8 +83,10 @@ nav ul li a {
 }
 .box-container {
   margin-top: 30px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+  justify-content: center;
   gap: 20px;
 }
 .box {
@@ -97,21 +106,44 @@ nav ul li a {
   padding: 50px 40px;
 }
 .portfolio-items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
   justify-content: center;
+  justify-items: center;
   align-items: center;
   gap: 30px;
 }
 .portfolio-item {
+  width: 400px;
+  display: grid;
+  justify-items: center;
   border-radius: 10px;
   border: 2px solid gray;
 }
 
 .portfolio-card {
-  margin: 10px;
-  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  width: 100%;
   height: 150px;
-  background: #ddd;
+}
+
+.satu {
+  background-image: url(img/1.jpeg);
+  background-position: top;
+  background-size: cover;
+}
+
+.dua {
+  background-image: url(img/2.jpeg);
+  background-position: top;
+  background-size: cover;
+}
+
+.tiga {
+  background-image: url(img/3.jpeg);
+  background-position: top;
+  background-size: cover;
 }
 
 .portfolio-items h6 {
@@ -127,7 +159,3 @@ footer {
   background-image: linear-gradient(to right, #0d6efd, rgb(14, 28, 151));
   color: white;
 }
-
-/* footer p {
-  justify-content: center;
-} */
